@@ -1,0 +1,65 @@
+{
+    "name": "crm-y/new-crm",
+    "type": "project",
+    "description": "CRM Y built with Laravel 10 and Vue 3",
+    "keywords": ["laravel", "crm"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0",
+        "laravel/breeze": "^1.23",
+        "laravel/sanctum": "^3.2",
+        "laravel/tinker": "^2.8",
+        "spatie/laravel-permission": "^6.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.21",
+        "laravel/pint": "^1.10",
+        "laravel/sail": "^1.24",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeders",
+            "database/factories"
+        ],
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "laravel/pint": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

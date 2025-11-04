@@ -1,0 +1,38 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+[dir="rtl"] .table th,
+[dir="rtl"] .table td {
+    text-align: right;
+}
